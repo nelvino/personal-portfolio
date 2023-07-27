@@ -35,25 +35,25 @@ const OurWork = () => {
         <Frame3 variants={slider}></Frame3>
         <Frame4 variants={slider}></Frame4>
       </motion.div>
-      <Movie>
-        <motion.h2 variants={fade}>The Athlete</motion.h2>
+      <Project>
+        <motion.h2 variants={fade}>Open AI Integration</motion.h2>
         <motion.div variants={lineAnim} className="line"></motion.div>
         <Link to="/work/the-athlete">
           <Hide>
             <motion.img variants={photoAnim} src={athlete} alt="athlete" />
           </Hide>
         </Link>
-      </Movie>
+      </Project>
 
-      <Movie ref={element} variants={fade} animate={controls} initial="hidden">
-        <h2>The Racer</h2>
+      <Project ref={element} variants={fade} animate={controls} initial="hidden">
+        <h2>Music Player</h2>
         <motion.div variants={lineAnim} className="line"></motion.div>
         <Link to="/work/the-racer">
           <img src={theracer} alt="theracer" />
         </Link>
-      </Movie>
+      </Project>
 
-      <Movie
+      <Project
         ref={element2}
         variants={fade}
         animate={controls2}
@@ -64,7 +64,7 @@ const OurWork = () => {
         <Link to="/work/good-times">
           <img src={goodtimes} alt="goodtimes" />
         </Link>
-      </Movie>
+      </Project>
       <ScrollTop />
     </Work>
   );
@@ -82,12 +82,12 @@ const Work = styled(motion.div)`
     padding: 1rem 0rem;
   }
 `;
-const Movie = styled(motion.div)`
+const Project = styled(motion.div)`
   padding-bottom: 10rem;
 
   .line {
     height: 0.5rem;
-    background: #23d997;
+    background: #0acfc5;
     margin-bottom: 3rem;
   }
   img {

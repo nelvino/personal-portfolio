@@ -7,7 +7,8 @@ export const About = styled(motion.div)`
   align-items: center;
   justify-content: space-between;
   padding: 5rem 10rem;
-  color: white;
+  color: black;
+  /* background-color: aliceblue; */
   @media (max-width: 1300px) {
     display: block;
     padding: 2rem 2rem;
@@ -32,10 +33,34 @@ export const Image = styled.div`
   z-index: 2;
   flex: 1;
   overflow: hidden;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 15px;
   img {
     width: 100%;
     height: 80vh;
     object-fit: cover;
+  }
+`;
+
+export const Library = styled.div`
+  z-index: 2;
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: hidden;
+  h2 {
+    padding-bottom: 1rem !important;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+  }
+  p {
+    width: 70%;
+    display: flex;
+    justify-content: center !important;
+    align-items: center;
   }
 `;
 

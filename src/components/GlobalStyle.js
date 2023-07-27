@@ -16,8 +16,11 @@ html{
 }
 
 body{
-    background: #1b1b1b;
-    font-family: 'Inter', sans-serif;
+    /* background: #1b1b1b; */
+    background: #fff;
+    font-family: 'Sanchez', serif;
+    color: black;
+    /* font-family: 'Inter', sans-serif; */
     overflow-x: hidden;
 }
 button{
@@ -26,10 +29,14 @@ button{
     cursor: pointer;
     padding: 1rem 2rem;
     border: 3px solid #23d997;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 15px;
     background: transparent;
-    color: white;
+    color: black;
     transition: all 0.5s ease;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Sanchez', serif;
     &:hover{
         background-color: #23d997;
         color: white;
@@ -40,7 +47,7 @@ button{
         font-size: 4rem;
     }
     h3{
-        color: white;
+        color: #000000;
     }
     h4{
         font-weight: bold;
@@ -52,11 +59,11 @@ button{
     }
     span{
         font-weight: bold;
-        color:#23d997;
+        color:#0acfc5;
     }
     p{
         padding: 3rem 0rem;
-        color: #ccc;
+        color: #221d1d;
         font-size: 1.4rem;
         line-height: 150%;
     }

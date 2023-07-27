@@ -1,7 +1,10 @@
 import React from "react";
 //Page Components
 import AboutSection from "../components/AboutSection";
-import ServicesSection from "../components/ServicesSection";
+import HowBuildWebsite from "../components/HowBuildWebsite";
+import ReactRouter from "../components/ReactRouter";
+import StyledComponents from "../components/StyledComponents";
+import FramerMotion from "../components/FramerMotion";
 import FaqSection from "../components/FaqSection";
 //Animations
 import { motion } from "framer-motion";
@@ -17,7 +20,10 @@ const AboutUs = () => {
       animate="show"
     >
       <AboutSection />
-      <ServicesSection />
+      <HowBuildWebsite />
+      <ReactRouter />
+      <FramerMotion />
+      <StyledComponents />
       <FaqSection />
       <ScrollTop />
     </motion.div>
