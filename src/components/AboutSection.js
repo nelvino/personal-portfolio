@@ -25,7 +25,7 @@ const AboutSection = () => {
           </Hide> */}
         </motion.div>
         <motion.p variants={fade}>
-          I am a front-end software developer with 2 years of experience
+          I am a front-end software developer with over 4 years of experience
           specializing in React.js, JavaScript, GraphQL, and Agile
           Methodologies. I have a strong passion for creating visually appealing
           and user-friendly web applications.

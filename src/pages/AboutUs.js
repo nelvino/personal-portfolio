@@ -1,15 +1,17 @@
 import React from "react";
 //Page Components
 import AboutSection from "../components/AboutSection";
-import HowBuildWebsite from "../components/HowBuildWebsite";
-import ReactRouter from "../components/ReactRouter";
-import StyledComponents from "../components/StyledComponents";
-import FramerMotion from "../components/FramerMotion";
-import FaqSection from "../components/FaqSection";
+// import HowBuildWebsite from "../components/HowBuildWebsite";
+// import ReactRouter from "../components/ReactRouter";
+// import StyledComponents from "../components/StyledComponents";
+// import FramerMotion from "../components/FramerMotion";
+// import FaqSection from "../components/FaqSection";
 //Animations
 import { motion } from "framer-motion";
 import { pageAnimation } from "../animation";
 import ScrollTop from "../components/ScrollTop";
+import PortfolioCards from "../components/PortfolioCards";
+import Footer from "../components/Footer";
 
 const AboutUs = () => {
   return (
@@ -20,11 +22,13 @@ const AboutUs = () => {
       animate="show"
     >
       <AboutSection />
-      <HowBuildWebsite />
+      <PortfolioCards />
+      <Footer />
+      {/* <HowBuildWebsite />
       <ReactRouter />
       <FramerMotion />
       <StyledComponents />
-      <FaqSection />
+      <FaqSection /> */}
       <ScrollTop />
     </motion.div>
   );
