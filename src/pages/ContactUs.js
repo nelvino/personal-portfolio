@@ -5,6 +5,9 @@ import styled from "styled-components";
 import ContactTitle from "../components/ContactUs/ContactTitle";
 import ContactMethod from "../components/ContactUs/ContactMethod";
 
+// Import React Icons for more colorful and modern icons
+import { FaEnvelope, FaGithub, FaPhone } from "react-icons/fa";
+
 const ContactUs = () => {
   return (
     <ContactStyle
@@ -18,17 +21,17 @@ const ContactUs = () => {
       <ContactMethods>
         <ContactMethod
           title="Send an Email"
-          icon="✉️"
+          icon={<FaEnvelope size={24} color="#E74C3C" />} // Red color for email
           link="mailto:nicoelvino@gmail.com"
         />
         <ContactMethod
           title="Check my GitHub"
-          icon="💻"
+          icon={<FaGithub size={24} color="#333" />} // Default GitHub color
           link="https://github.com/nelvino"
         />
         <ContactMethod
           title="Call Me"
-          icon="📞"
+          icon={<FaPhone size={24} color="#2ECC71" />} // Green color for phone
           link="tel:0415164208"
         />
       </ContactMethods>

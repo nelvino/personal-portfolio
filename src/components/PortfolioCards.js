@@ -2,18 +2,17 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-// Sample Images (You can replace these with actual image imports)
-import img1 from "../img/home1.png";
+import DonatenicoApp from "../img/DonatenicoApp.png";
 import img2 from "../img/home2.png";
 import img3 from "../img/goodtimes-small.png";
 
 const PortfolioCards = () => {
   const cardData = [
     {
-      img: img1,
-      title: "Project One",
-      description: "This is a brief description of Project One.",
-      link: "/project-one",
+      img: DonatenicoApp,
+      title: "DonateNico Project",
+      description: "MERN stack application for donations. Server code deployed on Render, and client code deployed on Vercel.",
+      link: "https://donate-nico.vercel.app/register",
     },
     {
       img: img2,
@@ -27,27 +26,51 @@ const PortfolioCards = () => {
       description: "This is a brief description of Project Three.",
       link: "/project-three",
     },
-    // Add more card data as needed
   ];
 
   return (
-    <CardContainer>
-      {cardData.map((card, index) => (
-        <Card key={index}>
-          <Link to={card.link}>
-            <CardImage src={card.img} alt={card.title} />
-            <CardContent>
-              <h3>{card.title}</h3>
-              <p>{card.description}</p>
-            </CardContent>
-          </Link>
+    <Section>
+      <Title>Check out some of my work</Title>
+      <CardContainer>
+        {cardData.map((card, index) => (
+          <Card key={index}>
+          {card.link.startsWith('http') ? (
+            <a href={card.link} target="_blank" rel="noopener noreferrer">
+              <CardImage src={card.img} alt={card.title} />
+              <CardContent>
+                <h3>{card.title}</h3>
+                <p>{card.description}</p>
+              </CardContent>
+            </a>
+          ) : (
+            <Link to={card.link}>
+              <CardImage src={card.img} alt={card.title} />
+              <CardContent>
+                <h3>{card.title}</h3>
+                <p>{card.description}</p>
+              </CardContent>
+            </Link>
+          )}
         </Card>
-      ))}
-    </CardContainer>
+        ))}
+      </CardContainer>
+    </Section>
   );
 };
 
 // Styled Components
+
+const Section = styled.section`
+  padding: 4rem 2rem;
+  background-color: #fff;
+  text-align: center;
+`;
+
+const Title = styled.h2`
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #353535;
+`;
 
 const CardContainer = styled.div`
   display: grid;
@@ -65,20 +88,25 @@ const CardContainer = styled.div`
 `;
 
 const Card = styled.div`
-  background-color: #f8f8f8;
+  background-color: #fff;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 
   &:hover {
     transform: translateY(-5px);
   }
+
+  a {
+    text-decoration: none; /* Remove underline from <a> tags */
+    color: inherit; /* Inherit color for links */
+  }
 `;
 
 const CardImage = styled.img`
   width: 100%;
-  height: 200px;
+  height: 300px;
   object-fit: cover;
 `;
 
@@ -88,6 +116,7 @@ const CardContent = styled.div`
   h3 {
     margin: 0 0 0.5rem 0;
     font-size: 1.5rem;
+    padding-top: 1.5rem;
   }
 
   p {

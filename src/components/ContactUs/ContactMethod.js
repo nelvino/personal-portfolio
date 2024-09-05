@@ -9,7 +9,7 @@ const ContactMethod = ({ title, icon, link }) => {
       <Social variants={titleAnim}>
         <Circle>{icon}</Circle>
         <a href={link} target="_blank" rel="noopener noreferrer">
-          <h2>{title}</h2>
+          <Title>{title}</Title>
         </a>
       </Social>
     </Hide>
@@ -25,19 +25,16 @@ const Hide = styled.div`
 const Social = styled(motion.div)`
   display: flex;
   align-items: center;
-  h2 {
-    margin: 2rem;
-    color: #353535;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
   }
 
   a {
     text-decoration: none;
     color: inherit;
     transition: color 0.3s ease;
-
-    &:hover {
-      color: #61dafb;
-    }
   }
 `;
 
@@ -45,12 +42,21 @@ const Circle = styled.div`
   border-radius: 50%;
   width: 3rem;
   height: 3rem;
-  background: #353535;
+  background: #f8f8f8;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
   font-size: 1.5rem;
+`;
+
+const Title = styled.h2`
+  margin: 2rem;
+  color: #353535;
+  transition: color 0.3s ease;
+
+  ${Social}:hover & {
+    color: #61dafb;
+  }
 `;
 
 export default ContactMethod;
