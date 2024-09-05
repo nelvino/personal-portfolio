@@ -3,28 +3,28 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 import DonatenicoApp from "../img/DonatenicoApp.png";
-import img2 from "../img/home2.png";
-import img3 from "../img/goodtimes-small.png";
+import legasiCover from "../img/legasiCover.png";
+import triiyoWebsite from "../img/triiyo-website.png";
 
 const PortfolioCards = () => {
   const cardData = [
     {
       img: DonatenicoApp,
-      title: "DonateNico Project",
+      title: "DonateNico Web App",
       description: "MERN stack application for donations. Server code deployed on Render, and client code deployed on Vercel.",
       link: "https://donate-nico.vercel.app/register",
     },
     {
-      img: img2,
-      title: "Project Two",
-      description: "This is a brief description of Project Two.",
-      link: "/project-two",
+      img: legasiCover,
+      title: "Legasi Mobile App",
+      description: "React Native app, optimized for both iOS and Android deployments. Built with Firebase Auth, DB and Storage, and Stripe integration.",
+      link: "/",
     },
     {
-      img: img3,
-      title: "Project Three",
-      description: "This is a brief description of Project Three.",
-      link: "/project-three",
+      img: triiyoWebsite,
+      title: "triiyo marketing website",
+      description: "Gatsby.js & React.js marketing website, connected to Storyblok headless CMS via GraphQL. Hosted on Netlify.",
+      link: "https://triiyo.com/",
     },
   ];
 

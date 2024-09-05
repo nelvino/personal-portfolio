@@ -25,15 +25,15 @@ const AboutSection = () => {
           </Hide> */}
         </motion.div>
         <motion.p variants={fade}>
-          I am a front-end software developer with over 4 years of experience
-          specializing in React.js, JavaScript, GraphQL, and Agile
-          Methodologies. I have a strong passion for creating visually appealing
-          and user-friendly web applications.
+          I am a skilled full-stack software developer with over 5 years of
+          experience, specializing in building modern, responsive web
+          applications using React.js, Node.js, React Native, and the MERN stack. Proficient
+          in JavaScript, GraphQL, Azure DevOps, and Agile methodologies, I am passionate about
+          delivering high-performance, visually appealing, and user-friendly
+          solutions that prioritize speed and functionality.
         </motion.p>
         <Link to="/contact">
-          <motion.button variants={fade}>
-            Contact Me
-          </motion.button>
+          <motion.button variants={fade}>Contact Me</motion.button>
         </Link>
       </Description>
       <Image>
