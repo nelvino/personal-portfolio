@@ -2,12 +2,19 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
+import CommentsApp from "../img/comments-app.png";
 import DonatenicoApp from "../img/DonatenicoApp.png";
 import legasiCover from "../img/legasiCover.png";
 import triiyoWebsite from "../img/triiyo-website.png";
 
 const PortfolioCards = () => {
   const cardData = [
+    {
+      img: CommentsApp,
+      title: "Comments App",
+      description: "React app with TypeScript and Zuztand, hosted on GItHub pages, using GitHub Actions for CI/CD.",
+      link: "https://nelvino.github.io/comments-app/",
+    },
     {
       img: DonatenicoApp,
       title: "DonateNico Web App",
